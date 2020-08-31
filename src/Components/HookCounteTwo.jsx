@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MainCounter, Button } from "../Styled-Components/HookStyled.js";
 
-function HookCounteTwo() {
+function HookCounteTwo(props) {
   const initCount = 0;
 
   const [count, setCount] = useState(initCount);
@@ -13,18 +13,20 @@ function HookCounteTwo() {
   };
 
   return (
-    <MainCounter flex="1">
+    <MainCounter flex={props.flexBasis}>
       <h2 style={{ color: "#333" }}>Count {count}</h2>
-      <Button
-        onClick={() => {
-          if (count > 0) setCount(count - 1);
-        }}
-      >
-        -
-      </Button>
-      <Button onClick={() => setCount(initCount)}>Reset</Button>
-      <Button onClick={() => setCount(count + 1)}>+</Button>
-      <Button onClick={incrementFive}> + 5</Button>
+      <div>
+        <Button
+          onClick={() => {
+            if (count > 0) setCount(count - 1);
+          }}
+        >
+          -
+        </Button>
+        <Button onClick={() => setCount(initCount)}>Reset</Button>
+        <Button onClick={() => setCount(count + 1)}>+</Button>
+        <Button onClick={incrementFive}> + 5</Button>
+      </div>
     </MainCounter>
   );
 }

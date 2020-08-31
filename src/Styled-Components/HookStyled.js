@@ -4,23 +4,23 @@ export const RootApp = styled.main`
   margin: 0;
   position: relative;
   display: flex;
-  flex-basis: 2;
   flex-wrap: wrap;
-  width: 100%;
+  width: 96%;
+  margin: 5px auto;
   height: 100%;
+  justify-content: space-around;
 `;
 
 export const TitleHook = styled.h3`
   color: blue;
 `;
 
-export const MainCounter = styled.section`
+export const MainCounter = styled.div`
+  display: flex;
+  flex-basis: ${(props) => props.flex};
   margin-top: 1rem;
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
-  position: relative;
+  flex-direction: column;
   padding: 2rem 3rem;
-  flex: ${(props) => props.flex};
   padding-bottom: 2.5rem;
   height: max-content;
   box-shadow: 0 0 0.4rem #0f0f0f63;

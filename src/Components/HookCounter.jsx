@@ -26,11 +26,11 @@ const HookButtonPlus = styled.button`
   } */
 `;
 
-function HookCounter() {
+function HookCounter(props) {
   const [sub, setCount] = useState(false);
 
   return (
-    <MainCounter flex="1">
+    <MainCounter flex={props.flexBasis}>
       <h2 style={{ color: sub === false ? "#c90e37" : "#333" }}>
         {sub === false ? "Subscribe now" : "You Was Subscription"}
       </h2>
