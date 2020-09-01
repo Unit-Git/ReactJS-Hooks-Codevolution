@@ -1,14 +1,15 @@
 import styled from "styled-components";
 
 export const RootApp = styled.main`
-  margin: 0;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
   position: relative;
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
   width: 96%;
   margin: 5px auto;
   height: 100%;
-  justify-content: space-around;
 `;
 
 export const TitleHook = styled.h3`
@@ -17,8 +18,6 @@ export const TitleHook = styled.h3`
 
 export const MainCounter = styled.div`
   display: flex;
-  flex-basis: ${(props) => props.flex};
-  margin-top: 1rem;
   flex-direction: column;
   padding: 2rem 3rem;
   padding-bottom: 2.5rem;

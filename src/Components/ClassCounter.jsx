@@ -35,7 +35,7 @@ class ClassCounter extends Component {
 
   render() {
     return (
-      <MainCounter flex={this.props.flexBasis}>
+      <MainCounter>
         <h2 style={{ color: "#00adbd" }}>Class Counter</h2>
         <ButtonPlus onClick={this.increment}>
           Count {this.state.count}

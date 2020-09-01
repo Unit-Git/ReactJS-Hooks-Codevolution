@@ -31,7 +31,7 @@ function HookCounter3(props) {
   const [unit, setUnits] = useState(dataUnit);
 
   return (
-    <MainCounter flex={props.flexBasis}>
+    <MainCounter>
       <h2>Hooks 3</h2>
       <div>
         <FormHook action="">

@@ -1,19 +1,19 @@
 import React, { useState } from "react";
 import { MainCounter, Button } from "../Styled-Components/HookStyled.js";
 
-function HookCounteTwo(props) {
+function HookCounter2(props) {
   const initCount = 0;
 
   const [count, setCount] = useState(initCount);
 
   const incrementFive = () => {
     for (let i = 0; i < 5; i++) {
-      setCount((prevCount) => prevCount + 1);
+      setCount(prevCount => prevCount + 1);
     }
   };
 
   return (
-    <MainCounter flex={props.flexBasis}>
+    <MainCounter>
       <h2 style={{ color: "#333" }}>Count {count}</h2>
       <div>
         <Button
@@ -31,4 +31,4 @@ function HookCounteTwo(props) {
   );
 }
 
-export default HookCounteTwo;
+export default HookCounter2;
