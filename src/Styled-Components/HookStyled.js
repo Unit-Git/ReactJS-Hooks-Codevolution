@@ -48,3 +48,18 @@ export const Button = styled.button`
     box-shadow: 0 0 0.25rem #040201;
   }
 `;
+
+export const Input = styled.input`
+  padding: 0.4rem 0.5rem;
+  height: 20px;
+  font-size: 19px;
+  color: ${props => props.fontColor};
+  outline: none;
+  border: 2px solid ${props => props.border};
+  background-color: transparent;
+
+  &:focus {
+    border: 2px solid ${props => props.border};
+    box-shadow: 0 0 0.2rem ${props => props.border};
+  }
+`;
