@@ -1,3 +1,41 @@
-.text {
-  color: #07084d;
+$defaultBtnOpacity: 1;
+$BtnHoverOpacity: 0.9;
+$primary: #2266fa;
+
+.hook-btn {
+  outline: none;
+  border: 0px;
+  padding: 0.6rem 1.3rem;
+  cursor: pointer;
+  border-radius: 4px;
+
+  &.hook-btn-primary {
+    color: #f2f2f2;
+    background-color: rgba($primary, $alpha: $defaultBtnOpacity);
+
+    &:hover {
+      background-color: rgba($primary, $alpha: $BtnHoverOpacity);
+      box-shadow: 0 0 0.1rem rgba($primary, $alpha: $BtnHoverOpacity);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0.5rem rgba($primary, $alpha: $BtnHoverOpacity);
+      background-color: rgba($primary, $alpha: $BtnHoverOpacity);
+    }
+  }
+}
+
+.hook {
+  &-card {
+    margin-block: 1rem;
+    min-width: 250px;
+    min-height: 190px;
+    border-radius: 4px;
+
+    &.hook-card-primary {
+      box-shadow: 0 0 0.5rem darken(rgba($primary, $alpha: 0.3), $amount: 20);
+      background-color: $primary;
+    }
+  }
 }
