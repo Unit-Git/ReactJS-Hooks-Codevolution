@@ -1,18 +1,15 @@
 import React from "react";
 import { RootApp } from "./Styled-Components/HookStyled.js";
-import HookMouse from "./Components/HookMouse.jsx";
 import "./scss/hook.scss";
-import MouseContainer from "./Components/MouseContainer.jsx";
-import IntervalClassCounter from "./Components/IntervalClassCounter.jsx";
-import IntervalHookCounter from "./Components/IntervalHookCounter.jsx";
+import DataFetching from "./Components/DataFetching.jsx";
 
 function App() {
   return (
     <RootApp>
-      <HookMouse />
-      <MouseContainer />
-      <IntervalClassCounter />
-      <IntervalHookCounter />
+      <div>
+        <h1>Data fetching with hook</h1>
+        <DataFetching />
+      </div>
     </RootApp>
   );
 }
