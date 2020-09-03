@@ -1,6 +1,7 @@
 $defaultBtnOpacity: 1;
 $BtnHoverOpacity: 0.9;
 $primary: #2266fa;
+$info: #24c5f7;
 
 .hook-btn {
   outline: none;
@@ -24,6 +25,22 @@ $primary: #2266fa;
       background-color: rgba($primary, $alpha: $BtnHoverOpacity);
     }
   }
+
+  &.hook-btn-info {
+    color: #f2f2f2;
+    background-color: rgba($info, $alpha: $defaultBtnOpacity);
+
+    &:hover {
+      background-color: rgba($info, $alpha: $BtnHoverOpacity);
+      box-shadow: 0 0 0.1rem rgba($info, $alpha: $BtnHoverOpacity);
+    }
+
+    &:active,
+    &:focus {
+      box-shadow: 0 0 0.5rem rgba($info, $alpha: $BtnHoverOpacity);
+      background-color: rgba($info, $alpha: $BtnHoverOpacity);
+    }
+  }
 }
 
 .hook {
@@ -32,10 +49,17 @@ $primary: #2266fa;
     min-width: 250px;
     min-height: 190px;
     border-radius: 4px;
-
+    padding: 1.2rem;
     &.hook-card-primary {
       box-shadow: 0 0 0.5rem darken(rgba($primary, $alpha: 0.3), $amount: 20);
+      color: #f2f2f2;
       background-color: $primary;
+    }
+
+    &.hook-card-info {
+      box-shadow: 0 0 0.5rem darken(rgba($info, $alpha: 0.3), $amount: 20);
+      color: #363636;
+      background-color: $info;
     }
   }
 }
