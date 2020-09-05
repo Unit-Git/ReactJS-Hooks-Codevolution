@@ -46,14 +46,18 @@ function DataFetching() {
   const [users, setUser] = useState([]);
 
   useEffect(() => {
+    document.title = "Data User";
+
     Axios.get("https://jsonplaceholder.typicode.com/users")
       .then(res => setUser(res.data))
       .catch(err => console.error(err));
   }, []);
 
   return (
-    <>
-      <h1>Tess</h1>
+    <div>
+      <h1 style={{ textDecoration: "2px #333 underline " }}>
+        Data fetching with hook
+      </h1>
       <RowUser>
         {users.map(user => {
           return (
@@ -64,7 +68,7 @@ function DataFetching() {
           );
         })}
       </RowUser>
-    </>
+    </div>
   );
 }
 
