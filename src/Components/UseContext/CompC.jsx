@@ -1,19 +1,16 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useContext } from "react";
 import CompE from "./CompE";
-import { UserContext } from "./UseContext.service";
+import { UserContext, ThemeContext } from "./UseContext.service";
 
 function CompC() {
+  const user = useContext(UserContext);
+  const theme = useContext(ThemeContext);
+
   return (
-    <UserContext.Consumer>
-      {data => {
-        return (
-          <Fragment>
-            <h2 style={{ color: data.color }}>Comp C</h2>
-            <CompE />
-          </Fragment>
-        );
-      }}
-    </UserContext.Consumer>
+    <Fragment>
+      <h1 style={{ color: theme.color.primary }}>{user.username}</h1>
+      <CompE />
+    </Fragment>
   );
 }
 

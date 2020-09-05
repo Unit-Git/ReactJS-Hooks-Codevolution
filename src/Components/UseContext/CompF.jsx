@@ -1,19 +1,14 @@
-import React, { Fragment } from "react";
-import { UserContext } from "./UseContext.service";
+import React, { Fragment, useContext } from "react";
+import { UserContext, ThemeContext } from "./UseContext.service";
 
 function CompF() {
+  const user = useContext(UserContext);
+  const theme = useContext(ThemeContext);
+
   return (
-    <div>
-      <UserContext.Consumer>
-        {data => {
-          return (
-            <Fragment>
-              <h3 style={{ color: data.color }}>{data.username}</h3>
-            </Fragment>
-          );
-        }}
-      </UserContext.Consumer>
-    </div>
+    <Fragment>
+      <h3 style={{ color: theme.color.primary }}>{user.address}</h3>
+    </Fragment>
   );
 }
 
