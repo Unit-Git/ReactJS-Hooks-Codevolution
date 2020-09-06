@@ -1,11 +1,11 @@
-import React, { Fragment, useReducer, useState } from "react";
+import React, { Fragment, useReducer } from "react";
 import styled from "styled-components";
 
 const Title = styled.h1`
   text-decoration: 2px #333 underline;
 `;
 
-const BadgeCount = styled.div`
+export const BadgeCount = styled.div`
   padding: 0.3rem 0.4rem;
   width: max-content;
   background-color: #2266fa;

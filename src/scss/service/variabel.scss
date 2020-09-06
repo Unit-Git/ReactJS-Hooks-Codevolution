@@ -1,0 +1,30 @@
+$primary: #2266fa;
+$info: #24c5f7;
+$danger: #ff044f;
+$secondary: #0e033f;
+$success: #06f060;
+$dark: #0e0e0e;
+$white: #fff !default;
+$gray-900: #212529 !default;
+
+$defaultBtnOpacity: 1;
+$BtnHoverOpacity: 0.9;
+
+$yiq-contrasted-threshold: 150 !default;
+
+$yiq-text-dark: $gray-900 !default;
+$yiq-text-light: $white !default;
+
+$theme-colors: () !default;
+
+$theme-colors: map-merge(
+  (
+    "primary": $primary,
+    "secondary": $secondary,
+    "info": $info,
+    "danger": $danger,
+    "success": $success,
+    "dark": $dark,
+  ),
+  $theme-colors
+);

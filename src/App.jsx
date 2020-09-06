@@ -4,6 +4,7 @@ import "./scss/hook.scss";
 import DataFetching from "./Components/DataFetching.jsx";
 import UseContextService from "./Components/UseContext/UseContext.service.jsx";
 import CounterOneReducer from "./Components/useReducer/CounterOneReducer.jsx";
+import CounterTwoReducer from "./Components/useReducer/CounterTwoReducer.jsx";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </div>
       <div>
         <CounterOneReducer />
+        <CounterTwoReducer />
       </div>
     </RootApp>
   );

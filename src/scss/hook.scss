@@ -1,7 +1,8 @@
-$defaultBtnOpacity: 1;
-$BtnHoverOpacity: 0.9;
-$primary: #2266fa;
-$info: #24c5f7;
+@import "./service/functions.scss";
+@import "./service/variabel.scss";
+@import "./service/mixins.scss";
+@import "./components/buttons.scss";
+@import "./components/typography.scss";
 
 .hook-btn {
   outline: none;

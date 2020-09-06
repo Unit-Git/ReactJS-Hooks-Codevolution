@@ -1,0 +1,37 @@
+@mixin button-variant(
+  $background,
+  $border,
+  $hover-background: darken($background, 3.5%),
+  $hover-border: darken($border, 10%),
+  $active-background: darken($background, 10%),
+  $active-border: darken($border, 12.5%)
+) {
+  color: color-yiq($background);
+  border-color: $border;
+  background: $background;
+  // @include hover() {
+  //   color: color-yiq($hover-background);
+  //   border-color: $hover-border;
+  // }
+
+  &:hover {
+    background: rgba($hover-background, $alpha: 0.8);
+    color: color-yiq($hover-background);
+    border-color: $hover-border;
+    box-shadow: 0 0 0.2rem rgba($background, 0.5);
+  }
+
+  &:focus,
+  &.focus {
+    background: rgba($hover-background, 0.9);
+    color: color-yiq($hover-background);
+    border-color: $hover-border;
+    box-shadow: 0 0 0.4rem rgba($background, 0.8);
+  }
+}
+
+@mixin text-variant($class, $color) {
+  #{$class} {
+    color: $color !important;
+  }
+}
