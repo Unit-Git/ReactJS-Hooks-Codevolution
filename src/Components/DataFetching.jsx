@@ -46,8 +46,6 @@ function DataFetching() {
   const [users, setUser] = useState([]);
 
   useEffect(() => {
-    document.title = "Data User";
-
     Axios.get("https://jsonplaceholder.typicode.com/users")
       .then(res => setUser(res.data))
       .catch(err => console.error(err));
