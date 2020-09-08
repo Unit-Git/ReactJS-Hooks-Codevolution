@@ -5,7 +5,7 @@ export const RootApp = styled.main`
   padding-bottom: 3rem;
   position: relative;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 1rem;
   width: 96%;
   margin: 5px auto;
