@@ -1,9 +1,9 @@
 import React from "react";
 import { HKSidebar } from "../../Styled-Components/style.Hooks";
-import { Container, Nav, NavLink, NavItem } from "reactstrap";
-import { Link } from "react-router-dom";
+import { Container, Nav, NavItem } from "reactstrap";
+import { NavItemHook } from "./NavItem.Hook";
 
-function SidebarHook() {
+function SidebarHook(props) {
   return (
     <HKSidebar className="hk-sidebar">
       <Container>
@@ -11,9 +11,14 @@ function SidebarHook() {
           <p>React Hook Tutorial</p>
           <Nav vertical>
             <NavItem>
-              <Link className="nav-link text-black-50" to="/ref">
-                Ref
-              </Link>
+              <NavItemHook {...props} className="nav-link " to="/">
+                Home
+              </NavItemHook>
+            </NavItem>
+            <NavItem>
+              <NavItemHook {...props} className="nav-link " to="/use-callback">
+                Use Callback
+              </NavItemHook>
             </NavItem>
           </Nav>
         </div>

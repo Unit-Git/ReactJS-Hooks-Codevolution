@@ -14,7 +14,7 @@ function App() {
   return (
     <Router>
       <Fragment>
-        <Route path="/" exact component={_MainHook} />
+        <Route path="/" component={_MainHook}></Route>
         {/* <Route path="/shoe-shop" component={MainProjectHook} /> */}
       </Fragment>
     </Router>
