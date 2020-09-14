@@ -20,6 +20,11 @@ function SidebarHook(props) {
                 Use Callback
               </NavItemHook>
             </NavItem>
+            <NavItem>
+              <NavItemHook {...props} className="nav-link " to="/use-memo">
+                Use Memo
+              </NavItemHook>
+            </NavItem>
           </Nav>
         </div>
       </Container>

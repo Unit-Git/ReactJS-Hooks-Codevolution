@@ -2,6 +2,7 @@
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
+  z-index: 9000;
 
   padding: {
     top: 2rem;
@@ -32,6 +33,7 @@
     & {
       position: fixed;
       padding: 0;
+      z-index: 9000 !important;
       & .container {
         padding: 0 !important;
       }

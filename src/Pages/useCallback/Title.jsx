@@ -4,7 +4,7 @@ function Title() {
   console.log("rendering the title");
   return (
     <Fragment>
-      <h2>UseCallback()</h2>
+      <h2>useCallback()</h2>
     </Fragment>
   );
 }

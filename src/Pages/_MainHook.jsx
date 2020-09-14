@@ -9,6 +9,7 @@ import {
 import { HKWrapper } from "../Styled-Components/style.Hooks";
 import Welcome from "./Welcome";
 import UseCallbackHook from "./useCallback/UseCallbackHook.jsx";
+import UseMemoHook from "./useMemo/UseMemoHook";
 
 function _MainHook() {
   return (
@@ -20,6 +21,10 @@ function _MainHook() {
             <Route
               path="/use-callback"
               component={props => <UseCallbackHook {...props} />}
+            />
+            <Route
+              path="/use-memo"
+              component={props => <UseMemoHook {...props} />}
             />
           </Switch>
         </HKWrapper>
