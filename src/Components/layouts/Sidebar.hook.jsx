@@ -25,6 +25,11 @@ function SidebarHook(props) {
                 Use Memo
               </NavItemHook>
             </NavItem>
+            <NavItem>
+              <NavItemHook {...props} className="nav-link " to="/use-ref">
+                Use Ref
+              </NavItemHook>
+            </NavItem>
           </Nav>
         </div>
       </Container>
