@@ -6,6 +6,7 @@ import Welcome from "./Welcome";
 import UseCallbackHook from "./useCallback/UseCallbackHook.jsx";
 import UseMemoHook from "./useMemo/UseMemoHook";
 import UseRefHook from "./useRef/UseRefHook";
+import CustomHooks from "./customHooks/CustomHooks";
 
 function _MainHook() {
   return (
@@ -25,6 +26,10 @@ function _MainHook() {
             <Route
               path="/use-ref"
               component={props => <UseRefHook {...props} />}
+            />
+            <Route
+              path="/custom-hook"
+              component={props => <CustomHooks {...props} />}
             />
           </Switch>
         </HKWrapper>

@@ -30,6 +30,11 @@ function SidebarHook(props) {
                 Use Ref
               </NavItemHook>
             </NavItem>
+            <NavItem>
+              <NavItemHook {...props} className="nav-link " to="/custom-hook">
+                Custom Hook
+              </NavItemHook>
+            </NavItem>
           </Nav>
         </div>
       </Container>
