@@ -2,71 +2,9 @@
 @import "./service/variabel.scss";
 @import "./service/mixins.scss";
 @import "./components/buttons.scss";
+@import "./components/card.scss";
 @import "./components/typography.scss";
 
-.hook-btn {
-  outline: none;
-  border: 0px;
-  padding: 0.6rem 1.3rem;
-  cursor: pointer;
-  border-radius: 4px;
-  margin-inline: 0.2rem;
+@import "~bootstrap/scss/bootstrap.scss";
 
-  &.hook-btn-primary {
-    color: #f2f2f2;
-    background-color: rgba($primary, $alpha: $defaultBtnOpacity);
-
-    &:hover {
-      background-color: rgba($primary, $alpha: $BtnHoverOpacity);
-      box-shadow: 0 0 0.1rem rgba($primary, $alpha: $BtnHoverOpacity);
-    }
-
-    &:active,
-    &:focus {
-      box-shadow: 0 0 0.5rem rgba($primary, $alpha: $BtnHoverOpacity);
-      background-color: rgba($primary, $alpha: $BtnHoverOpacity);
-    }
-
-    &.click {
-      box-shadow: 0 0 1rem rgba($primary, $alpha: 1);
-      // background-color: rgba($primary, $alpha: $BtnHoverOpacity);
-    }
-  }
-
-  &.hook-btn-info {
-    color: #f2f2f2;
-    background-color: rgba($info, $alpha: $defaultBtnOpacity);
-
-    &:hover {
-      background-color: rgba($info, $alpha: $BtnHoverOpacity);
-      box-shadow: 0 0 0.1rem rgba($info, $alpha: $BtnHoverOpacity);
-    }
-
-    &:active,
-    &:focus {
-      box-shadow: 0 0 0.5rem rgba($info, $alpha: $BtnHoverOpacity);
-      background-color: rgba($info, $alpha: $BtnHoverOpacity);
-    }
-  }
-}
-
-.hook {
-  &-card {
-    margin-block: 1rem;
-    min-width: 250px;
-    min-height: 190px;
-    border-radius: 4px;
-    padding: 1.2rem;
-    &.hook-card-primary {
-      box-shadow: 0 0 0.5rem darken(rgba($primary, $alpha: 0.3), $amount: 20);
-      color: #f2f2f2;
-      background-color: $primary;
-    }
-
-    &.hook-card-info {
-      box-shadow: 0 0 0.5rem darken(rgba($info, $alpha: 0.3), $amount: 20);
-      color: #363636;
-      background-color: $info;
-    }
-  }
-}
+@import "./pages/wrapper.hooks.scss";
