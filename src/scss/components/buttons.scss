@@ -8,6 +8,11 @@
   margin-left: 0.2rem;
   margin-right: 0.2rem;
   transition: 0.1s all ease-in-out;
+
+  &.hk-btn-sm {
+    padding: 0.3rem 0.8rem !important;
+    font-size: 12px !important;
+  }
 }
 
 @each $color, $value in $theme-colors {
