@@ -1,5 +1,6 @@
 import React, { Fragment, useState } from "react";
 import { Card, Button } from "reactstrap";
+import useDocTitle from "../../hooks/useDocTitle";
 
 function CustomDocTitleTwo() {
   const [count, setCount] = useState(0);
@@ -10,12 +11,12 @@ function CustomDocTitleTwo() {
   //     document.title = "Loading..";
   //   };
   // }, [count]);
-  // useDocTitle("use", count);
+  useDocTitle("use", count);
 
   return (
     <Fragment>
       <Card body className="border-0 shadow-sm">
-        <Button onClick={() => setCount(count + 1)}>
+        <Button onClick={() => setCount(prevCount => prevCount + 1)}>
           Increment Document Title - {count}
         </Button>
       </Card>

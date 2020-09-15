@@ -16,7 +16,7 @@ function CustomDocTitleOne() {
   return (
     <Fragment>
       <Card body className="border-0 shadow-sm">
-        <Button onClick={() => setCount(count + 1)}>
+        <Button onClick={() => setCount(prevCount => prevCount + 1)}>
           Increment Document Title - {count}
         </Button>
       </Card>
