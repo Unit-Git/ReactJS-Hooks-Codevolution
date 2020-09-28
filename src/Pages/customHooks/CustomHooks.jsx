@@ -3,6 +3,7 @@ import { Container, Row, Col } from "reactstrap";
 import CustomDocTitleOne from "./Custom.DocTitleOne";
 import CustomDocTitleTwo from "./Custom.DocTitleTwo";
 import TemplateHook from "../../Components/layouts/Template";
+import CustomHookCounterOne from "./Custom.CounterOne";
 
 function CustomHooks(props) {
   return (
@@ -17,6 +18,14 @@ function CustomHooks(props) {
           </Col>
           <Col sm={6} md={4}>
             <CustomDocTitleTwo />
+          </Col>
+        </Row>
+        {/* useCounter */}
+        <br />
+        <br />
+        <Row>
+          <Col sm="10" lg="4" md="6">
+            <CustomHookCounterOne />
           </Col>
         </Row>
       </Container>
